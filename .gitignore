@@ -1,0 +1,3 @@
+Flask/.env
+*.txt
+config.env.template

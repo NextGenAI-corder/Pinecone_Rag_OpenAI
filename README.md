@@ -33,10 +33,12 @@ pip install -r requirements.txt
 2.3 .env ファイルの作成と設定
 config.env.template をコピーして .env を作成し、以下の内容を記述します。
 
+```
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
 PINECONE_API_KEY=xxxxxxxx-xxxx-xxxx
 PINECONE_ENV=your-environment
 PINECONE_INDEX_NAME=your-index-name
+```
 
 2.4 ベクトルの登録（初回のみ）
 python Flask/upload_embeddings.py

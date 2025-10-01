@@ -4,24 +4,26 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 
 ## ディレクトリ構成
 
----
+```text
+.
 ├── Flask
-│ ├── PDF
-│ │ └── sample_specification.pdf
-│ ├── app.py
-│ ├── config.py
-│ ├── templates
-│ │ └── index.html
-│ └── upload_embeddings.py
+│   ├── PDF
+│   │   └── sample_specification.pdf
+│   ├── app.py
+│   ├── config.py
+│   ├── templates
+│   │   └── index.html
+│   └── upload_embeddings.py
 ├── Scripts
-│ ├── index.html
-│ ├── openai.web.js
-│ └── query_embeddings.py
+│   ├── index.html
+│   ├── openai.web.js
+│   └── query_embeddings.py
 ├── config.env.template
 ├── docs
-│ └── operating_instructions.pdf
+│   └── operating_instructions.pdf
 └── requirements.txt
----
+
+起動手順
 
 markdown
 コードをコピーする

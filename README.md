@@ -4,7 +4,7 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 
 ## ディレクトリ構成
 
-'''
+---
 ├── Flask
 │ ├── PDF
 │ │ └── sample_specification.pdf
@@ -21,7 +21,7 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 ├── docs
 │ └── operating_instructions.pdf
 └── requirements.txt
-'''
+---
 
 markdown
 コードをコピーする

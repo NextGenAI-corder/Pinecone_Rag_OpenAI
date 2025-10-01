@@ -52,7 +52,7 @@ def query():
         completion = openai.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "ユーザーの質問に対して、以下の情報から答えだけを日本語で簡潔に抜き出して返答してください。"},
+                {"role": "system", "content": "ユーザーの質問に対して、日本語で親切に50字以内で簡潔に返答してください。"},
                 {"role": "user", "content": f"質問: {user_input}\n情報:\n{context}"}
             ]
         )

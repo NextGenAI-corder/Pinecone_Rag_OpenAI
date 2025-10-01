@@ -2,7 +2,7 @@
 
 RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです。
 
-## ディレクトリ構成
+## 1. ディレクトリ構成
 
 ```text
 .
@@ -22,46 +22,39 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 ├── docs
 │   └── operating_instructions.pdf
 └── requirements.txt
+2. 起動手順
+2.1 Python の準備
+Python 3.10 以上をインストールしてください。
 
-起動手順
-
-markdown
+2.2 ライブラリのインストール
+bash
 コードをコピーする
-
-## 起動手順
-
-1. Python 3.10 以上をインストール
-2. ライブラリをインストール：
-
-```bash
 pip install -r requirements.txt
-.env を作成し、以下を記述：
+2.3 .env ファイルの作成と設定
+config.env.template をコピーして .env を作成し、以下の内容を記述します。
 
-ini
+env
 コードをコピーする
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
 PINECONE_API_KEY=xxxxxxxx-xxxx-xxxx
 PINECONE_ENV=your-environment
 PINECONE_INDEX_NAME=your-index-name
-初回のみ、埋め込みを登録：
-
+2.4 ベクトルの登録（初回のみ）
 bash
 コードをコピーする
 python Flask/upload_embeddings.py
-アプリを起動：
-
+2.5 アプリの起動
 bash
 コードをコピーする
 python Flask/app.py
-ブラウザでアクセス：
-
+2.6 ブラウザでのアクセス
 arduino
 コードをコピーする
 http://localhost:5000
-マニュアル
-docs/operating_instructions.pdf を参照してください。
+3. マニュアル
+詳細な使用方法は docs/operating_instructions.pdf を参照してください。
 
-ライセンス
-教育・研究・PoC 用途での利用は許可します。商用利用・再配布は販売条件に従ってください。
+4. ライセンス
+教育・研究・PoC 用途での利用は許可します。
 
-コードをコピーする
+商用利用・再配布は販売条件に従ってください。

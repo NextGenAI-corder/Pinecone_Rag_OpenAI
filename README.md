@@ -1,21 +1,46 @@
-## 🚀 起動手順（Flask版）
+# Pinecone RAG FAQ Bot 構築キット
 
-1. Python 3.10以上をインストールしておく
+RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです。
 
-2. 必要なライブラリをインストール：
+## ディレクトリ構成
+
+.
+├── Flask
+│ ├── PDF
+│ │ └── sample_specification.pdf
+│ ├── app.py
+│ ├── config.py
+│ ├── templates
+│ │ └── index.html
+│ └── upload_embeddings.py
+├── Scripts
+│ ├── index.html
+│ ├── openai.web.js
+│ └── query_embeddings.py
+├── config.env.template
+├── docs
+│ └── operating_instructions.pdf
+└── requirements.txt
+
+markdown
+コードをコピーする
+
+## 起動手順
+
+1. Python 3.10 以上をインストール
+2. ライブラリをインストール：
 
 ```bash
 pip install -r requirements.txt
-config.env.template をコピーして .env を作成し、APIキー等を記述：
+.env を作成し、以下を記述：
 
-text
+ini
 コードをコピーする
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
 PINECONE_API_KEY=xxxxxxxx-xxxx-xxxx
-PINECONE_ENV=us-east4-gcp
+PINECONE_ENV=your-environment
 PINECONE_INDEX_NAME=your-index-name
-PDFなどの知識ソースを Flask/PDF/ に配置
-→ 初回のみベクトル登録を実行：
+初回のみ、埋め込みを登録：
 
 bash
 コードをコピーする
@@ -30,7 +55,10 @@ python Flask/app.py
 arduino
 コードをコピーする
 http://localhost:5000
-yaml
-コードをコピーする
+マニュアル
+docs/operating_instructions.pdf を参照してください。
 
----
+ライセンス
+教育・研究・PoC 用途での利用は許可します。商用利用・再配布は販売条件に従ってください。
+
+コードをコピーする

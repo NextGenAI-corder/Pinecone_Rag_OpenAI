@@ -6,6 +6,7 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 
 ```
 ├── Flask
+│   ├── .env
 │   ├── PDF
 │   │   └── sample_specification.pdf
 │   ├── app.py
@@ -19,6 +20,7 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 ├── query_embeddings.py
 ├── requirements.txt
 └── upload_embeddings.py
+
 ```
 
 ## 2. 起動手順

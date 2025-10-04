@@ -1,4 +1,4 @@
-# Pinecone RAG FAQ Bot 構築キット
+# Pinecone+Rag AI FAQ構築セット
 
 RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです。
 
@@ -10,17 +10,15 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 │   │   └── sample_specification.pdf
 │   ├── app.py
 │   ├── config.py
-│   ├── templates
-│   │   └── index.html
-│   └── upload_embeddings.py
-├── Scripts
-│   ├── index.html
-│   ├── openai.web.js
-│   └── query_embeddings.py
+│   └── templates
+│       └── index.html
+├── README.md
 ├── config.env.template
 ├── docs
-│   └── operating_instructions.pdf
-└── requirements.txt
+│   ├── operating_instructions.pdf
+├── query_embeddings.py
+├── requirements.txt
+└── upload_embeddings.py
 ```
 
 ## 2. 起動手順
@@ -41,7 +39,7 @@ PINECONE_INDEX_NAME=your-index-name
 ```
 
 2.4 ベクトルの登録（初回のみ）
-python Flask/upload_embeddings.py
+python upload_embeddings.py
 
 2.5 アプリの起動
 python Flask/app.py

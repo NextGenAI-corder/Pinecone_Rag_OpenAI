@@ -66,7 +66,7 @@ def get_embedding(text):
 # ---------------------------
 # Pineconeアップロード
 # ---------------------------
-def upload_to_pinecone(vector_id, embedding, metadata, namespace="nextgen-specs"):
+def upload_to_pinecone(vector_id, embedding, metadata, namespace):
     headers = {"Api-Key": PINECONE_API_KEY, "Content-Type": "application/json"}
     upsert_url = f"{PINECONE_URL}/vectors/upsert"
 
@@ -89,7 +89,7 @@ def upload_to_pinecone(vector_id, embedding, metadata, namespace="nextgen-specs"
 # ---------------------------
 # ディレクトリ全ファイル処理
 # ---------------------------
-def process_directory(directory_path, namespace="nextgen-specs"):
+def process_directory(directory_path, namespace):
     for root, _, files in os.walk(directory_path):
         for file in files:
             file_path = os.path.join(root, file)
@@ -112,4 +112,4 @@ def process_directory(directory_path, namespace="nextgen-specs"):
 
 if __name__ == "__main__":
     # 例: docsフォルダ配下すべてのファイル対象
-    process_directory("PDF", namespace="nextgen-specs")
+    process_directory("Flask/PDF", "nextgen-specs")

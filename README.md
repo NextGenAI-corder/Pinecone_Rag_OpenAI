@@ -40,10 +40,10 @@ PINECONE_INDEX_NAME=your-index-name
 ```
 
 2.4 ベクトルの登録（初回のみ）
-python upload_embeddings.py <フォルダ名> <namespace>
+python upload_embeddings.py "フォルダ名" "namespace"
 
 2.5 アプリの起動
-python Flask/app.py <namespace>
+python Flask/app.py "namespace"
 
 2.6 ブラウザでのアクセス
 http://localhost:5000

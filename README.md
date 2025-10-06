@@ -5,22 +5,21 @@ RAG と OpenAI API を用いた FAQ ボットの構築テンプレートです�
 ## 1. ディレクトリ構成
 
 ```
-├── Flask
-│   ├── .env
-│   ├── PDF
-│   │   └── sample_specification.pdf
-│   ├── app.py
-│   ├── config.py
-│   └── templates
-│       └── index.html
-├── README.md
-├── config.env.template
-├── docs
-│   ├── operating_instructions.pdf
-├── query_embeddings.py
-├── requirements.txt
-└── upload_embeddings.py
-
+├── Flask	
+│     ├── .env	
+│     ├── app.py	
+│     ├── config.py	
+│     └── templates	
+│               └── index.html	
+│── PDF	
+│      └── sample_specification.pdf        	
+├── README.md	
+├── config.env.template	
+├── docs	
+│      ├── operating_instructions.pdf       	
+├── query_embeddings.py	
+├── requirements.txt	
+└── upload_embeddings.py	
 ```
 
 ## 2. 起動手順
@@ -41,10 +40,10 @@ PINECONE_INDEX_NAME=your-index-name
 ```
 
 2.4 ベクトルの登録（初回のみ）
-python upload_embeddings.py
+python upload_embeddings.py <フォルダ名> <namespace>
 
 2.5 アプリの起動
-python Flask/app.py
+python Flask/app.py <namespace>
 
 2.6 ブラウザでのアクセス
 http://localhost:5000

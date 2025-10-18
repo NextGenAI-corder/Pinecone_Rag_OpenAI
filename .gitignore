@@ -1,3 +1,5 @@
 Flask/.env
 *.txt
+*.pptx
+*.xlsx
 config.env.template

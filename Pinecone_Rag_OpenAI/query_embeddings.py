@@ -25,7 +25,7 @@ index = pc.Index(config.get("PINECONE_INDEX_NAME"))
 # 入力: 質問文（自然言語）, namespace（データセット識別子）
 # 出力: 検索されたメタ情報（text）のリスト
 # ---------------------------
-def get_similar_chunks(question, namespace):
+def get_similar_chunks(question, ns):
     # OpenAI APIで質問をベクトル化（埋め込みモデルを使用）
     embedding = (
         openai.embeddings.create(
@@ -41,7 +41,7 @@ def get_similar_chunks(question, namespace):
         vector=embedding,
         top_k=5,  # 上位5件の類似文書を取得
         include_metadata=True,  # 元テキストを含むメタ情報を含めて返す
-        namespace=namespace,  # プロジェクトや用途で論理分離するための識別子
+        namespace=ns,  # プロジェクトや用途で論理分離するための識別子
     )
 
     # メタ情報からテキスト本文のみ抽出して返却
@@ -53,9 +53,9 @@ def get_similar_chunks(question, namespace):
 # 入力: ユーザーの質問, namespace（検索対象）
 # 出力: gpt-4o による自然言語の回答文（str）
 # ---------------------------
-def ask_direct_answer(question, namespace):
+def ask_direct_answer(question, ns):
     # 類似文書を取得し、回答のコンテキスト（文脈）として利用
-    chunks = get_similar_chunks(question, namespace)
+    chunks = get_similar_chunks(question, ns)
     context = "\n".join(chunks)
 
     # プロンプト設計：FAQ文書を前提にした回答生成を指示

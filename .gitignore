@@ -3,3 +3,4 @@ Flask/.env
 *.pptx
 *.xlsx
 config.env.template
+*.zip
